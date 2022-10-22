@@ -1,0 +1,46 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  --color-ligthpink: #FDEADD;
+  --color-darkpink: #AF676F;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+}
+@font-face {
+  font-family: 'Butler';
+  src: url(./assets/fonts/Butler_Regular.otf);
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./assets/fonts/Montserrat-Regular.otf);
+}
+.h1-m{
+  font: 32px Montserrat;
+}
+.h1-b{
+  font: 32px Butler;
+}
+.h2-b{
+  font: 28px Butler;
+}
+.h3-m{
+  font: 18px Montserrat;
+}
+.p-m{
+  font: normal 16px Montserrat;
+}
+.absolute{
+  position: absolute;
+}
+.relative{
+  position: relative;
+}
+.display-n{
+  display: none;
+}
+body{
+  background-color: #FEF5EE;
+}

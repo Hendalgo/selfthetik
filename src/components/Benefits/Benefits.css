@@ -1,0 +1,16 @@
+.benefit{
+  border-width: 0 0 0 3px;
+  border-style: solid;
+  border-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 20px;
+}
+.benefit h4{
+  font: bold 16px Montserrat;
+  color: var(--color-white);
+  margin-bottom: 8px;
+}
+.benefit p{
+  font: 400 16px Montserrat;
+  color: #FFFFFF80;
+}
