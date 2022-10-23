@@ -37,8 +37,8 @@ const Home = () => {
           </div>
           <div className="exclusive-videos">
             {
-              videos.map((item)=>
-                <VideoContainer key={Math.random()} title={item.title} img={item.img} description={item.description} />
+              videos.map((item, index)=>
+                <VideoContainer key={index} title={item.title} img={item.img} description={item.description} />
               )
             }
           </div>
@@ -53,7 +53,7 @@ const Home = () => {
         </div>
       </section>
       <section className="testimonials">
-        <Carousel>
+        <Carousel visibleItems={5}>
           <div className="">
             <img src={test} alt="" />
           </div>
