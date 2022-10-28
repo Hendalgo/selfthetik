@@ -65,7 +65,7 @@ const Home = () => {
           </div>
         </Carousel>
       </section>
-      <section className="bottom-banner">
+      <section className="bottom-banner display-n">
         <div className="banner">
           <button className="banner-button">Inscribirme</button>
         </div>

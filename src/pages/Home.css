@@ -43,6 +43,11 @@
   letter-spacing: 1px;
   margin-bottom: 30px;
 }
+.testimonials{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media only screen and (max-width: 768px) {
   .about{
     margin-top: 75px;
