@@ -8,10 +8,15 @@ import roundLogo from '@assets/logo/rounded-logo.png';
 const Hero = () => {
   return (
     <React.Fragment>
-      <section className="hero" style={{backgroundImage: `url(${bgImage})`}}>
+      <section className="hero-container" style={{backgroundImage: `url(${bgImage})`}}>
+        <div className="hero">
         <div className="title-container">
-          <h1 className="h1-b title"> Lorem ipsum dolor sit <span className="textdecoration">amet</span> consectetur adipiscing</h1>
-          <p className="p-m description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptate fugit itaque hic harum, eligendi </p>
+          <h1 className="h1-main title"> 
+            ¡Arma tu rutina ideal de 
+            <span className="textdecoration">skincare</span> 
+            de una vez por todas!
+          </h1>
+          <p className="p-m description">Es momento de que la piel de tu rostro reciba el cuidado que tanto merece, conoce el paso a paso junto a Selfthetik</p>
         </div>
         <div className="video-container">
           <img src={miniature} alt="Miniature to intro video" className="miniature" />
@@ -21,6 +26,7 @@ const Hero = () => {
           <div className="vc-after">
             <img src={roundLogo} alt="Rounded Logo" />
           </div>
+        </div>
         </div>
       </section>
     </React.Fragment>

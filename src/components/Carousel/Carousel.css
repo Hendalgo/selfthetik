@@ -3,13 +3,12 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: 150px;
-  max-width: 720px;
+  max-width: 1420px;
   overflow: hidden;
-  height: 100vh;
+  margin-top: 24px;
 }
 .carousel-item{
-  min-width: 70vw;
+  min-width: 300px;
   height: auto;
   
   border-radius: 20px;
@@ -35,18 +34,17 @@
 .slide-left{
   animation: slide-left 350ms ease-in-out forwards;
 }
-
-@keyframes slideout-left {
+@keyframes slideout-left{
   from{
     transform: scale(1) translateX(0);
     filter: blur(0);
   }
   to{
-    transform: scale(0.8) translateX(calc(-70vw - 24%));
+    transform: scale(0.8) translateX(calc(-300px - 24%));
     filter: blur(3px);
   }
 }
-@keyframes slidein-left {
+@keyframes slidein-left{
   from{
     transform: scale(0.8) translateX(0);
     filter: blur(3px);
@@ -64,3 +62,51 @@
     transform: scale(0.8) translateX(calc(-125%));
   }
 } 
+
+@keyframes slideout-left-m {
+  from{
+    transform: scale(1) translateX(0);
+    filter: blur(0);
+  }
+  to{
+    transform: scale(0.8) translateX(calc(-70vw - 24%));
+    filter: blur(3px);
+  }
+}
+@keyframes slidein-left-m {
+  from{
+    transform: scale(0.8) translateX(0);
+    filter: blur(3px);
+  }
+  to{
+    transform: scale(1) translateX(calc(-100%));
+    filter: blur(0px);
+  }
+}
+@keyframes slide-left-m{
+  from{
+    transform: scale(0.8) translateX(0);
+  }
+  to{
+    transform: scale(0.8) translateX(calc(-125%));
+  }
+} 
+
+@media only screen and (max-width: 768px) {
+  .carousel-item{
+    min-width: 70vw;
+    height: auto;
+    
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .slideout-left{
+    animation: slideout-left-m 350ms ease-in-out forwards;
+  }
+  .slidein-left{
+    animation: slidein-left-m 350ms ease-in-out forwards;
+  }
+  .slide-left{
+    animation: slide-left-m 350ms ease-in-out forwards;
+  }
+}

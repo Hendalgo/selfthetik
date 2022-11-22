@@ -1,12 +1,12 @@
 import React from 'react';
 import './Benefits.css'
 
-const Benefits = () => {
+const Benefits = ({title, description}) => {
   return (
     <React.Fragment>
       <div className="benefit">
-        <h4>Beneficio 1</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at non sed nulla at blandit nisl velit. </p>
+        <h4>{title}</h4>
+        <p>{description}</p>
       </div>
     </React.Fragment>
   )

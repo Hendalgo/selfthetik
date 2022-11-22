@@ -24,44 +24,47 @@ const Carousel = ({ width = "100%", height = "100%", visibleItems = 3, timer = 4
   const prevToPrevRef = useRef(null);
   const currentRef = useRef(null);
   useEffect(()=>{
-    let changeCarousel;
+    const changeCarousel = ()=>{
+      console.log("wazaa")
+      const change = setTimeout(()=>{
+        setPositions(({current, next, nextToNext, prev, prevToPrev}) =>{
+          let posAux = {
+            current,
+            next,
+            prev,
+            nextToNext,
+            prevToPrev
+          };
+          if (current === (img.length - 1)) {
+            posAux.current = 0;
+          }
+          else{
+            posAux.current = current + 1;
+          }
+          (next === (img.length - 1))? posAux.next = 0 :posAux.next = next+1;
+          (posAux.next === (img.length - 1))? posAux.nextToNext = 0 :posAux.nextToNext = posAux.next+1;
+          (prev === (img.length - 1))? posAux.prev = 0 :posAux.prev = prev+ 1;
+          (posAux.prev === (img.length - 1))? posAux.prevToPrev = 0 :posAux.prevToPrev = prev+1;
+          return posAux;
+        });
+        currentRef.current.classList.remove("slideout-left");
+        nextRef.current.classList.remove("slidein-left");
+        nextToNextRef.current.classList.remove("slide-left");
+      }, 350);
+    }
     const play = setInterval(()=>{
-      console.log("Interval");
       setAutoPlay(autoPlay =>{
         if(autoPlay){
           currentRef.current.classList.add("slideout-left");
           nextRef.current.classList.add("slidein-left");
           nextToNextRef.current.classList.add("slide-left");
-          
-        changeCarousel = setTimeout(()=>{
-          console.log("Time out");
-          setPositions(({current, next, nextToNext, prev, prevToPrev}) =>{
-            let posAux = {
-              current,
-              next,
-              prev,
-              nextToNext,
-              prevToPrev
-            };
-            console.log(posAux);
-
-            (current === (img.lenght - 1))? posAux.current = 0 :posAux.current = current+1;
-            (next === (img.length - 1))? posAux.next = 0 :posAux.next = next+1;
-            (posAux.next === (img.length - 1))? posAux.nextToNext = 0 :posAux.nextToNext = posAux.next+1;
-            (prev === (img.length - 1))? posAux.prev = 0 :posAux.prev = prev+ 1;
-            (posAux.prev === (img.length - 1))? posAux.prevToPrev = 0 :posAux.prevToPrev = prev+1;
-            currentRef.current.classList.remove("slideout-left");
-            nextRef.current.classList.remove("slidein-left");
-            nextToNextRef.current.classList.remove("slide-left");
-            return posAux;
-          });
-        }, 350);
+          changeCarousel();
           return true;
         }
         return false;
       });
     } ,timer);
-    return ()=> {clearInterval(play); clearTimeout(changeCarousel);}
+    return ()=> clearInterval(play);
   }, [])
   return (
     <React.Fragment>

@@ -20,6 +20,9 @@
 .h1-m{
   font: 32px Montserrat;
 }
+.h1-main{   
+  font: 44px Butler;
+}
 .h1-b{
   font: 32px Butler;
 }
@@ -30,7 +33,7 @@
   font: 18px Montserrat;
 }
 .p-m{
-  font: normal 16px Montserrat;
+  font: normal 14px Montserrat;
 }
 .absolute{
   position: absolute;
@@ -43,4 +46,24 @@
 }
 body{
   background-color: #FEF5EE;
+}
+.bold{
+  font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+  .h1-m{
+    font: 32px Montserrat;
+  }
+  .h1-main{   
+    font: 32px Butler;
+  }
+  .h1-b{
+    font: 28px Butler;
+  }
+  .h2-b{
+    font: 28px Butler;
+  }
+  .h3-m{
+    font: 16px Montserrat;
+  }
 }
