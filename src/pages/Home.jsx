@@ -13,8 +13,8 @@ import results02 from '@assets/img/results02.jpg';
 import results03 from '@assets/img/results03.jpg';
 import results04 from '@assets/img/results04.jpg';
 import Benefits from '@components/Benefits';
-//import Carousel from '@components/Carousel';
 import Footer from '@components/Footer';
+import Modal from '../components/Modal';
 
 const Home = () => {
   const videos = [

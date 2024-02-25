@@ -13,16 +13,13 @@ const Hero = () => {
         <div className="title-container">
           <h1 className="h1-main title"> 
             ¡Arma tu rutina ideal de 
-            <span className="textdecoration">skincare</span> 
+            <span className="textdecoration">skin<span className='m-i'>care</span></span> 
             de una vez por todas!
           </h1>
           <p className="p-m description">Es momento de que la piel de tu rostro reciba el cuidado que tanto merece, conoce el paso a paso junto a Selfthetik</p>
         </div>
         <div className="video-container">
-          <img src={miniature} alt="Miniature to intro video" className="miniature" />
-          <button className="play-button">
-            <img src={playButton} alt="Play Button" />
-          </button>
+          <iframe className='miniature' width="560" height="315" src="https://www.youtube.com/embed/bnkjvpBigVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <div className="vc-after">
             <img src={roundLogo} alt="Rounded Logo" />
           </div>
