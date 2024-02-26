@@ -74,6 +74,9 @@ const Header = () => {
                 <a href="/#beneficios">Beneficios</a>
               </li>
               <li className="menu-item"> 
+                <a href="/#testimonios">Testimonios</a>
+              </li>
+              <li className="menu-item"> 
                 <a href="/#resultados">Resultados</a>
               </li>
               <li className="menu-item patreon">

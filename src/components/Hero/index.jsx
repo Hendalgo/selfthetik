@@ -19,7 +19,7 @@ const Hero = () => {
           <p className="p-m description">Es momento de que la piel de tu rostro reciba el cuidado que tanto merece, conoce el paso a paso junto a Selfthetik</p>
         </div>
         <div className="video-container">
-          <iframe className='miniature' width="560" height="315" src="https://www.youtube.com/embed/bnkjvpBigVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe className='miniature' width="560" height="315" src="https://www.youtube.com/embed/bnkjvpBigVY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           <div className="vc-after">
             <img src={roundLogo} alt="Rounded Logo" />
           </div>

@@ -15,6 +15,8 @@ import results04 from '@assets/img/results04.jpg';
 import Benefits from '@components/Benefits';
 import Footer from '@components/Footer';
 import Modal from '../components/Modal';
+import Carousel from '../components/Carousel';
+import CarouselItem from '../components/CarouselItem';
 
 const Home = () => {
   const videos = [
@@ -83,6 +85,47 @@ const Home = () => {
                 <Benefits title={item.title} description={item.description} key={index} />
               )
             }
+          </div>
+        </div>
+      </section>
+      <section id='testimonios' className="testimonials">
+        <div className="testimonials-container">
+          <div className="testimonials-title">
+            <h2 className='h1-b bold'>Lo que nuestros clientes opinan de nosotros</h2>
+          </div>
+          <div className="testimonials-items">
+            <Carousel>
+              <CarouselItem
+                img="https://picsum.photos/1080/1920?random=1"
+                title="Titulo 1"
+                description="Descripcion"
+                profilePicture="https://picsum.photos/50/50?random=1"
+              />
+              <CarouselItem
+                img="https://picsum.photos/1080/1920?random=2"
+                title="Titulo 2"
+                description="Descripcion"
+                profilePicture="https://picsum.photos/50/50?random=2"
+              />
+              <CarouselItem
+                img="https://picsum.photos/1080/1920?random=3"
+                title="Titulo 3"
+                description="Descripcion"
+                profilePicture="https://picsum.photos/50/50?random=3"
+              />
+              <CarouselItem
+                img="https://picsum.photos/1080/1920?random=4"
+                title="Titulo 4"
+                description="Descripcion"
+                profilePicture="https://picsum.photos/50/50?random=4"
+              />
+              <CarouselItem
+                img="https://picsum.photos/1080/1920?random=5"
+                title="Titulo 5"
+                description="Descripcion"
+                profilePicture="https://picsum.photos/50/50"
+              />
+            </Carousel>
           </div>
         </div>
       </section>
