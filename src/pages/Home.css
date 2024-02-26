@@ -70,10 +70,12 @@
 .testimonials-container{
   width: 100%;
   max-width: 1420px;
-  padding: 100px 8%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-inline: 8%;
+  padding-top: 100px;
+}
+.testimonials-title h2{
+  text-align: center;
+  margin-bottom: 30px;
 }
 .results{
   display: flex;
@@ -187,12 +189,6 @@
   .testimonials-title{
     padding: 75px 20px 0px 20px;
 
-  }
-  .testimonials-container{
-    padding: 0px 0;
-  }
-  .testimonials-title h2{
-    text-align: center;
   }
   .results{
     flex-direction: column;

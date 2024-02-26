@@ -88,7 +88,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id='testimonials' className="testimonials">
+      <section id='testimonios' className="testimonials">
         <div className="testimonials-container">
           <div className="testimonials-title">
             <h2 className='h1-b bold'>Lo que nuestros clientes opinan de nosotros</h2>
@@ -96,29 +96,34 @@ const Home = () => {
           <div className="testimonials-items">
             <Carousel>
               <CarouselItem
-                img="https://picsum.photos/1080/1920"
+                img="https://picsum.photos/1080/1920?random=1"
                 title="Titulo 1"
                 description="Descripcion"
+                profilePicture="https://picsum.photos/50/50?random=1"
               />
               <CarouselItem
-                img="https://fastly.picsum.photos/id/729/1080/1920.jpg?hmac=CsvOcg57XTJWdD_fM9mGV0e4OOVF4vIXs5p04LZ4Q_M"
+                img="https://picsum.photos/1080/1920?random=2"
                 title="Titulo 2"
                 description="Descripcion"
+                profilePicture="https://picsum.photos/50/50?random=2"
               />
               <CarouselItem
-                img="https://fastly.picsum.photos/id/483/1080/1920.jpg?hmac=LNLgDQ4_MQtLPbAWO-YIST02WsMf7xXf6auFl9zwnO4"
+                img="https://picsum.photos/1080/1920?random=3"
                 title="Titulo 3"
                 description="Descripcion"
+                profilePicture="https://picsum.photos/50/50?random=3"
               />
               <CarouselItem
-                img="https://picsum.photos/1080/1920"
+                img="https://picsum.photos/1080/1920?random=4"
                 title="Titulo 4"
                 description="Descripcion"
+                profilePicture="https://picsum.photos/50/50?random=4"
               />
               <CarouselItem
-                img="https://fastly.picsum.photos/id/85/1080/1920.jpg?hmac=2TE7i4VKTUTwdUhJ3BY_eqwcNitUlmi0DsandMAwA3c"
+                img="https://picsum.photos/1080/1920?random=5"
                 title="Titulo 5"
                 description="Descripcion"
+                profilePicture="https://picsum.photos/50/50"
               />
             </Carousel>
           </div>

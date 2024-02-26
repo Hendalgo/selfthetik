@@ -1,30 +1,47 @@
 
 
-.carousel-item{
+.slick-slide{
   position: relative;
   filter: blur(3px);
-  transform: scale(0.8);
-  transition: all 350ms ease-in-out;
-}
-.carousel-item img{
-  border-radius: 15px;
+  transform: scale(0.7);
+  transition: all 0.3s ease;
+  background-color: antiquewhite;
   aspect-ratio: 9/16;
-  width: 100%;
-  max-width: 350px;
 }
-.carousel-item .carousel-item-content{
+.slick-slide .video{
+  border-radius: 15px;
+  width: 100%;
+}
+.slick-slide .carousel-item-content{
   position: absolute;
   bottom: 20px;
   left: 0;
   right: 0;
-  margin-inline: 5px;
+  margin-inline: 10px;
   border-radius: 6.668px;
   border: 1.111px solid rgba(255, 255, 255, 0.20);
   background: #FEF5EE;
-  backdrop-filter: blur(8.890986442565918px);
+  display: flex;
+  padding: 14px;
+  align-items: center;
+  gap: 20px;
 }
-.carousel-item.active{
-  filter: blur(0px);
+.slick-slide .carousel-item-content-text{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+}
+.slick-slide .carousel-item-content h3{
+  color: #000;
+  font: 700 16px Montserrat;
+}
+.slick-slide .carousel-item-content img{
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.slick-center{
+  filter: blur(0);
   transform: scale(1);
 
 }

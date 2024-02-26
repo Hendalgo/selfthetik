@@ -1,50 +1,38 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './Carousel.css';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const Carousel = ({ width = "100%", height = "100%", visibleItems = 5, timer = 4500, children }) => {
-  const [current, setCurrent] = useState(Math.floor(visibleItems / 2));
-  const ref = useRef([]);
+const CarouselConfig = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  swipeToSlide: true,
+  centerMode: true,
+  className: 'center',
+  pauseOnHover: true,
+  autoplay: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+        centerMode: true,
+      }
+    }
+  ]
+};
 
-  let items = [...children];
-  
-  for (let i = 0; i < Math.floor(visibleItems / 2); i++) {
-    items.unshift(children[children.length - 1 - i]);
-    items.push(children[i]);
-  }
-
-  while (items.length < visibleItems - Math.floor(visibleItems / 2)) {
-    items = [...items, ...children];
-  }
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      ref.current.map((item, index) => {
-        if (index === current) {
-        }
-      });
-    }, timer);
-
-
-    return () => clearInterval(interval);
-  }, [current, timer]);
+const Carousel = ({width = '100%', height = '100%', children}) => {
   
   return (
-    <div className="carousel-container" style={{ width, height }}>
-      <div className="carousel">
-        {
-          items.map((item, index) =>{
-              return(
-                <div key={index} className={`carousel-item ${index === current ? 'active' : ''}`}
-                  ref={el => ref.current[index] = el}
-                >
-                  {item}
-                </div>
-              )
-            }
-          )
-        }
-      </div>
-    </div>
+    <Slider {...CarouselConfig}>
+      {children}
+    </Slider>
   )
 }
 
