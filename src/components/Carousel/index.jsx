@@ -1,91 +1,50 @@
-import React, { Children, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Carousel.css';
-import logoSelfhetik from '@assets/img/videos-miniature.jpg';
 
-const Carousel = ({ width = "100%", height = "100%", visibleItems = 3, timer = 4500}) => {
-  const  img = [
-    "https://picsum.photos/1080/1920",
-    "https://i.picsum.photos/id/284/1080/1920.jpg?hmac=x7CT5JDVS2id6_E-szJwk9XsV8MmVprj5G13k_dn7qI",
-    "https://i.picsum.photos/id/116/1080/1920.jpg?hmac=XnDRx5Vq5QMcJMpebj4SswMGczJGoLkNAWqte3cXml8",
-    "https://picsum.photos/1080/1920",
-    "https://picsum.photos/1080/1920"
-  ]
-  const [positions, setPositions] = useState({
-    current: 0,
-    prev: img.length-1,
-    next: 1,
-    prevToPrev: img.length-2,
-    nextToNext: 2
-  });
-  const [autoPlay, setAutoPlay] = useState(true);
-  const nextRef = useRef(null);
-  const prevRef = useRef(null);
-  const nextToNextRef = useRef(null);
-  const prevToPrevRef = useRef(null);
-  const currentRef = useRef(null);
-  useEffect(()=>{
-    const changeCarousel = ()=>{
-      console.log("wazaa")
-      const change = setTimeout(()=>{
-        setPositions(({current, next, nextToNext, prev, prevToPrev}) =>{
-          let posAux = {
-            current,
-            next,
-            prev,
-            nextToNext,
-            prevToPrev
-          };
-          if (current === (img.length - 1)) {
-            posAux.current = 0;
-          }
-          else{
-            posAux.current = current + 1;
-          }
-          (next === (img.length - 1))? posAux.next = 0 :posAux.next = next+1;
-          (posAux.next === (img.length - 1))? posAux.nextToNext = 0 :posAux.nextToNext = posAux.next+1;
-          (prev === (img.length - 1))? posAux.prev = 0 :posAux.prev = prev+ 1;
-          (posAux.prev === (img.length - 1))? posAux.prevToPrev = 0 :posAux.prevToPrev = prev+1;
-          return posAux;
-        });
-        currentRef.current.classList.remove("slideout-left");
-        nextRef.current.classList.remove("slidein-left");
-        nextToNextRef.current.classList.remove("slide-left");
-      }, 350);
-    }
-    const play = setInterval(()=>{
-      setAutoPlay(autoPlay =>{
-        if(autoPlay){
-          currentRef.current.classList.add("slideout-left");
-          nextRef.current.classList.add("slidein-left");
-          nextToNextRef.current.classList.add("slide-left");
-          changeCarousel();
-          return true;
+const Carousel = ({ width = "100%", height = "100%", visibleItems = 5, timer = 4500, children }) => {
+  const [current, setCurrent] = useState(Math.floor(visibleItems / 2));
+  const ref = useRef([]);
+
+  let items = [...children];
+  
+  for (let i = 0; i < Math.floor(visibleItems / 2); i++) {
+    items.unshift(children[children.length - 1 - i]);
+    items.push(children[i]);
+  }
+
+  while (items.length < visibleItems - Math.floor(visibleItems / 2)) {
+    items = [...items, ...children];
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      ref.current.map((item, index) => {
+        if (index === current) {
         }
-        return false;
       });
-    } ,timer);
-    return ()=> clearInterval(play);
-  }, [])
+    }, timer);
+
+
+    return () => clearInterval(interval);
+  }, [current, timer]);
+  
   return (
-    <React.Fragment>
-      <div className="carousel-container" {...{width, height}} onClick={()=>setAutoPlay(!autoPlay)}>
-        <div className="carousel-item unactive" ref={prevToPrevRef}>
-          <img src={img[positions.prevToPrev]} alt="" />
-        </div>
-        <div className="carousel-item unactive" ref={prevRef}>
-          <img src={img[positions.prev]} alt="" />
-        </div>
-        <div className="carousel-item active" ref={currentRef}>
-          <img src={img[positions.current]} alt="" />
-        </div>
-        <div className="carousel-item unactive" ref={nextRef}>
-          <img src={img[positions.next]} alt="" />
-        </div>
-        <div className="carousel-item unactive" ref={nextToNextRef}>
-          <img src={img[positions.nextToNext]} alt="" />
-        </div>
+    <div className="carousel-container" style={{ width, height }}>
+      <div className="carousel">
+        {
+          items.map((item, index) =>{
+              return(
+                <div key={index} className={`carousel-item ${index === current ? 'active' : ''}`}
+                  ref={el => ref.current[index] = el}
+                >
+                  {item}
+                </div>
+              )
+            }
+          )
+        }
       </div>
-    </React.Fragment>
+    </div>
   )
 }
 

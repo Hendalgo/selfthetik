@@ -1,0 +1,30 @@
+
+
+.carousel-item{
+  position: relative;
+  filter: blur(3px);
+  transform: scale(0.8);
+  transition: all 350ms ease-in-out;
+}
+.carousel-item img{
+  border-radius: 15px;
+  aspect-ratio: 9/16;
+  width: 100%;
+  max-width: 350px;
+}
+.carousel-item .carousel-item-content{
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin-inline: 5px;
+  border-radius: 6.668px;
+  border: 1.111px solid rgba(255, 255, 255, 0.20);
+  background: #FEF5EE;
+  backdrop-filter: blur(8.890986442565918px);
+}
+.carousel-item.active{
+  filter: blur(0px);
+  transform: scale(1);
+
+}

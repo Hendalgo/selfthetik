@@ -15,6 +15,8 @@ import results04 from '@assets/img/results04.jpg';
 import Benefits from '@components/Benefits';
 import Footer from '@components/Footer';
 import Modal from '../components/Modal';
+import Carousel from '../components/Carousel';
+import CarouselItem from '../components/CarouselItem';
 
 const Home = () => {
   const videos = [
@@ -83,6 +85,42 @@ const Home = () => {
                 <Benefits title={item.title} description={item.description} key={index} />
               )
             }
+          </div>
+        </div>
+      </section>
+      <section id='testimonials' className="testimonials">
+        <div className="testimonials-container">
+          <div className="testimonials-title">
+            <h2 className='h1-b bold'>Lo que nuestros clientes opinan de nosotros</h2>
+          </div>
+          <div className="testimonials-items">
+            <Carousel>
+              <CarouselItem
+                img="https://picsum.photos/1080/1920"
+                title="Titulo 1"
+                description="Descripcion"
+              />
+              <CarouselItem
+                img="https://fastly.picsum.photos/id/729/1080/1920.jpg?hmac=CsvOcg57XTJWdD_fM9mGV0e4OOVF4vIXs5p04LZ4Q_M"
+                title="Titulo 2"
+                description="Descripcion"
+              />
+              <CarouselItem
+                img="https://fastly.picsum.photos/id/483/1080/1920.jpg?hmac=LNLgDQ4_MQtLPbAWO-YIST02WsMf7xXf6auFl9zwnO4"
+                title="Titulo 3"
+                description="Descripcion"
+              />
+              <CarouselItem
+                img="https://picsum.photos/1080/1920"
+                title="Titulo 4"
+                description="Descripcion"
+              />
+              <CarouselItem
+                img="https://fastly.picsum.photos/id/85/1080/1920.jpg?hmac=2TE7i4VKTUTwdUhJ3BY_eqwcNitUlmi0DsandMAwA3c"
+                title="Titulo 5"
+                description="Descripcion"
+              />
+            </Carousel>
           </div>
         </div>
       </section>
