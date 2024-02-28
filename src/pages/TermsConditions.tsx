@@ -13,7 +13,7 @@ const TermsConditions = (): React.JSX.Element=>{
       <Header />
       <section className=''>
         <div className=''>
-          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js">
+          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
             <Viewer fileUrl='/docs/terms-conditions.pdf' />
           </Worker>
         </div>

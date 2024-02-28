@@ -170,7 +170,7 @@ const Home = ():React.JSX.Element => {
                 </h2>
               </div>
               <div className="subs-button">
-                <a className='p-m' href="http://www.patreon.com/selfthetik" target="_blank" rel="noopener noreferrer">Inscribirme</a>
+                <a className='p-m' href="http://www.patreon.com/selfthetik" target="_blank" rel="noopener noreferrer">{t("subscribe")}</a>
               </div>  
             </div>
           </div>
