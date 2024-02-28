@@ -18,7 +18,7 @@ const VideoContainer = ({title, img, description}: IVideoContainerProps):React.J
           <img src={videoIcon} alt="icon video" />
         </div>
         <p className="description-video p-m">
-         {description}
+          {description}
         </p>
       </div>
     </React.Fragment>

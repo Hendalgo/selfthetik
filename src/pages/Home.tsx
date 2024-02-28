@@ -144,18 +144,18 @@ const Home = ():React.JSX.Element => {
               <h2 className='h1-b bold'>Resultados </h2>
             </div>
             <div className="results-img">
-                <div className="r-img-1">
-                  <img src={results01} alt="" />
+              <div className="r-img-1">
+                <img src={results01} alt="" />
+              </div>
+              <div className="r-img-3">
+                <div className="r-img-2">
+                  <img src={results02} alt="" />
+                  <img src={results03} alt="" />
                 </div>
-                <div className="r-img-3">
-                  <div className="r-img-2">
-                    <img src={results02} alt="" />
-                    <img src={results03} alt="" />
-                  </div>
-                  <div className="r-img-4">
-                    <img src={results04} alt="" />
-                  </div>
+                <div className="r-img-4">
+                  <img src={results04} alt="" />
                 </div>
+              </div>
             </div>
           </div>
         </section>
@@ -175,14 +175,14 @@ const Home = ():React.JSX.Element => {
         </section>
         {
           visible
-          ?<a href='https://patreon.com/selfthetik' target="_blank">
-            <section className="bottom-banner">
-              <div className="banner">
-                <button className="banner-button p-m">Inscribirme</button>
-              </div>
-            </section>
-          </a>
-          :""
+            ?<a href='https://patreon.com/selfthetik' target="_blank">
+              <section className="bottom-banner">
+                <div className="banner">
+                  <button className="banner-button p-m">Inscribirme</button>
+                </div>
+              </section>
+            </a>
+            :""
         }
         <Footer />
       </Suspense>

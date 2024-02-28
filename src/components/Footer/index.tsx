@@ -19,7 +19,7 @@ const Footer = ():React.ReactPortal => {
         </div>
       </div>
     </React.Fragment>
-  , document.getElementById("footer")!);
+    , document.getElementById("footer")!);
 }
 
 export default Footer
