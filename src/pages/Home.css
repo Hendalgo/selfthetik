@@ -186,6 +186,10 @@
     padding-bottom: 0;
     margin-bottom: 50px;
   }
+  .testimonials-container{
+    padding-inline: 0px;
+    padding-top: 0px;
+  }
   .testimonials-title{
     padding: 75px 20px 0px 20px;
 
