@@ -27,6 +27,8 @@
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
       "@assets/*": ["./src/assets/*"],
+      "@types/*": ["./src/@types/*"],
+      "@locales/*": ["./src/locales/*"],
     }
 
   },

@@ -5,8 +5,11 @@ import menu from '@assets/svg/menuHamburger.json';
 import './Header.css';
 import patreonLogo from '@assets/svg/patreon.svg';
 import { Player, PlayerEvent } from '@lottiefiles/react-lottie-player';
+import { useTranslation } from 'react-i18next';
 
 const Header = ():React.ReactPortal => {
+  const {t} = useTranslation();
+
   const [width] = useState<number>(window.innerWidth);
   const [patreonVisible, setPatreonVisible] = useState<boolean>(false);
   const [toggle, setToggle] = useState<boolean>(false);
@@ -67,16 +70,16 @@ const Header = ():React.ReactPortal => {
               ?<div className="toggle">
                 <ul className='menu'>
                   <li className="menu-item">
-                    <a href="/#contenido-exclusivo">Contenido Exclusivo</a>
+                    <a href="/#contenido-exclusivo">{t("menu.content")}</a>
                   </li>
                   <li className="menu-item"> 
-                    <a href="/#beneficios">Beneficios</a>
+                    <a href="/#beneficios">{t("menu.benefits")}</a>
                   </li>
                   <li className="menu-item"> 
-                    <a href="/#testimonios">Testimonios</a>
+                    <a href="/#testimonios">{t("menu.testimonials")}</a>
                   </li>
                   <li className="menu-item"> 
-                    <a href="/#resultados">Resultados</a>
+                    <a href="/#resultados">{t("menu.results")}</a>
                   </li>
                   <li className="menu-item patreon">
                     <a href="https://patreon.com/selfthetik" target="_blank">

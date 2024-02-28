@@ -1,0 +1,49 @@
+{
+  "menu": {
+    "content": "Contenido Exclusivo",
+    "benefits": "Beneficios",
+    "testimonials": "Testimonios",
+    "results": "Resultados"
+  },
+  "hero": {
+    "title": "¡Arma tu rutina ideal de <span className='textdecoration'>skin<span className='m-i'>care</span></span> de una vez por todas!",
+    "description": "Es momento de que la piel de tu rostro reciba el cuidado que tanto merece, conoce el paso a paso junto a Selfthetik",
+    "videoAlt": "Rounded Logo"
+  },
+  "exclusiveContent": {
+    "title": "¿Qué encontraras en el contenido exclusivo?",
+    "routine1": {
+      "title": "Arma tu primera rutina de skincare",
+      "description": "Fácil, rápido y eficaz. Esta será la rutina ideal para ti si estás iniciando en el mundo del Skincare"
+    },
+    "routine2": {
+      "title": "Dile adiós a la incomodidad de la piel seca con esta rutina",
+      "description": "¿Tienes la piel seca? descubre cómo darle más brillo y elasticidad con tan solo cuatro pasos."
+    },
+    "routine3": {
+      "title": "Hagamos que el exceso de grasa ya no sea un problema",
+      "description": "Es momento de aprender como controlar esa grasita extra de nuestra piel. Conoce esta increíble rutina."
+    }
+  },
+  "benefits": {
+    "benefit1": {
+      "title": "¡Conoce tu piel y su cuidado!",
+      "description": "Te ayudaremos a conocer el tipo de piel que posees y aprenderás a cómo armar la rutina ideal para ti."
+    },
+    "benefit2": {
+      "title": "¡Adquiere un brillo increíble!",
+      "description": "Tu piel se verá mucho más sana y brillante, lucirá más hidratada y eliminarás impurezas."
+    },
+    "benefit3": {
+      "title": "¡Tu maquillaje lucirá mil veces mejor!",
+      "description": "El secreto para un maquillaje perfecto es el cuidado que le das a tu piel antes de utilizarlo, hará que resalte y dure más tiempo."
+    }
+  },
+  "testimonials":{
+    "title": "Lo que nuestros clientes opinan de nosotros"
+  },
+  "subscribe": "Inscríbete",
+  "subscribeOff": "Inscríbete con un 50% <br /> de descuento",
+  "privacyPolicy": "Política de privacidad",
+  "termsAndConditions": "Términos y condiciones"
+}

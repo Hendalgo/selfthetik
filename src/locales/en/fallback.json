@@ -1,0 +1,49 @@
+{
+  "menu": {
+    "content": "Exclusive Content",
+    "benefits": "Benefits",
+    "testimonials": "Testimonials",
+    "results": "Results"
+  },
+  "hero": {
+    "title": "Build your ideal skincare routine",
+    "description": "It's time for your face skin to receive the care it deserves, learn the step by step with Selfthetik",
+    "videoAlt": "Rounded Logo"
+  },
+  "exclusiveContent": {
+    "title": "What will you find in the exclusive content?",
+    "routine1": {
+      "title": "Build your first skincare routine",
+      "description": "Easy, fast and effective. This will be the ideal routine for you if you are starting in the world of Skincare"
+    },
+    "routine2": {
+      "title": "Say goodbye to the discomfort of dry skin with this routine",
+      "description": "Do you have dry skin? discover how to give it more shine and elasticity with just four steps."
+    },
+    "routine3": {
+      "title": "Let's make excess oil no longer a problem",
+      "description": "It's time to learn how to control that extra grease on our skin. Know this incredible routine."
+    }
+  },
+  "benefits": {
+    "benefit1": {
+      "title": "Know your skin and its care!",
+      "description": "We will help you to know the type of skin you have and you will learn how to assemble the ideal routine for you."
+    },
+    "benefit2": {
+      "title": "Get an incredible shine!",
+      "description": "Your skin will look much healthier and brighter, it will look more hydrated and you will eliminate impurities."
+    },
+    "benefit3": {
+      "title": "Your makeup will look a thousand times better!",
+      "description": "The secret to perfect makeup is the care you give your skin before using it, it will make it stand out and last longer."
+    }
+  },
+  "testimonials":{
+    "title": "What our customers think of us"
+  },
+  "subscribe": "Subscribe",
+  "subscribeOff": "Subscribe with a 50% discount",
+  "privacyPolicy": "Privacy Policy",
+  "termsAndConditions": "Terms and Conditions"
+}

@@ -9,6 +9,7 @@ import results01 from '@assets/img/results01.webp';
 import results02 from '@assets/img/results02.webp';
 import results03 from '@assets/img/results03.webp';
 import results04 from '@assets/img/results04.webp';
+import { useTranslation } from 'react-i18next';
 
 const Header = lazy(() => import('@components/Header'));
 const Hero = lazy(() => import('@components/Hero'));
@@ -29,35 +30,36 @@ interface BenefitsI {
 }
 
 const Home = ():React.JSX.Element => {
+  const {t} = useTranslation('ns1');
   const videos:Array<VideoI> = [
     {
       img: miniatura1,
-      title: 'Arma tu primera rutina de skincare',
-      description:'Fácil, rápido y eficaz. Esta será la rutina ideal para ti si estás iniciando en el mundo del Skincare'
+      title: t('exclusiveContent.routine1.title'),
+      description: t('exclusiveContent.routine1.description')
     },
     {
       img: miniatura2,
-      title: 'Dile adiós a la incomodidad de la piel seca con esta rutina',
-      description:'¿Tienes la piel seca? descubre cómo darle más brillo y elasticidad con tan solo cuatro pasos.'
+      title: t('exclusiveContent.routine2.title'),
+      description: t('exclusiveContent.routine2.description')
     },
     {
       img: miniatura3,
-      title: 'Hagamos que el exceso de grasa ya no sea un problema',
-      description:'Es momento de aprender como controlar esa grasita extra de nuestra piel. Conoce esta increíble rutina.'
+      title: t('exclusiveContent.routine3.title'),
+      description: t('exclusiveContent.routine3.description')
     },
   ];
   const benefits:Array<BenefitsI> = [
     {
-      title: '¡Conoce tu piel y su cuidado!',
-      description: 'Te ayudaremos a conocer el tipo de piel que posees y aprenderás a cómo armar la rutina ideal para ti.'
+      title: t('benefits.benefit1.title'),
+      description: t('benefits.benefit1.description')
     },
     {
-      title: '¡Adquiere un brillo increíble!',
-      description: 'Tu piel se verá mucho más sana y brillante, lucirá más hidratada y eliminarás impurezas.'
+      title: t('benefits.benefit2.title'),
+      description: t('benefits.benefit2.description')
     },
     {
-      title: '¡Tu maquillaje lucirá mil veces mejor!',
-      description: 'El secreto para un maquillaje perfecto es el cuidado que le das a tu piel antes de utilizarlo, hará que resalte y dure más tiempo.'
+      title: t('benefits.benefit3.title'),
+      description: t('benefits.benefit3.description')
     }
   ];
   const [width] = useState<number>(window.innerWidth);
@@ -79,7 +81,7 @@ const Home = ():React.JSX.Element => {
         <section id='contenido-exclusivo' className="about">
           <div className="about-container">
             <div className="about-title ">
-              <h2 className="h2-b">¿Qué encontraras en el contenido exclusivo?</h2>
+              <h2 className="h2-b">{t("exclusiveContent.title")}</h2>
             </div>
             <div className="exclusive-videos">
               {
@@ -92,7 +94,7 @@ const Home = ():React.JSX.Element => {
         </section>
         <section id='beneficios' className="benefits" style={{backgroundImage: `url(${bgBenefits})`}}>
           <div className="benefits-container">
-            <h2 id="benefits-title" className='h1-b'>Beneficios</h2>
+            <h2 id="benefits-title" className='h1-b'>{t("menu.benefits")}</h2>
             <div className="benefits-items">
               {
                 benefits.map((item, index)=>
@@ -105,7 +107,7 @@ const Home = ():React.JSX.Element => {
         <section id='testimonios' className="testimonials">
           <div className="testimonials-container">
             <div className="testimonials-title">
-              <h2 className='h1-b bold'>Lo que nuestros clientes opinan de nosotros</h2>
+              <h2 className='h1-b bold'>{t('testimonials.title')}</h2>
             </div>
             <div className="testimonials-items">
               <Carousel>
@@ -141,7 +143,7 @@ const Home = ():React.JSX.Element => {
         <section id='resultados' className="results">
           <div className="results-container">
             <div className='results-title'>
-              <h2 className='h1-b bold'>Resultados </h2>
+              <h2 className='h1-b bold'>{t("menu.results")}</h2>
             </div>
             <div className="results-img">
               <div className="r-img-1">
@@ -164,7 +166,7 @@ const Home = ():React.JSX.Element => {
             <div className="subscribe-bg" style={{backgroundImage: `url(${bgSubscribe})`}}>
               <div className="subs-title">
                 <h2 className='h1-b bold' style={{letterSpacing: 1}}>
-                  Inscríbete con un 50% <br /> de descuento
+                  {t('subscribeOff')}
                 </h2>
               </div>
               <div className="subs-button">
@@ -178,7 +180,7 @@ const Home = ():React.JSX.Element => {
             ?<a href='https://patreon.com/selfthetik' target="_blank">
               <section className="bottom-banner">
                 <div className="banner">
-                  <button className="banner-button p-m">Inscribirme</button>
+                  <button className="banner-button p-m">{t("subscribe")}</button>
                 </div>
               </section>
             </a>
