@@ -3,7 +3,11 @@ import { createPortal } from 'react-dom';
 import './Modal.css';
 import closeButton from '@assets/svg/close-button.png'
 
-const Modal = ({children}) => {
+interface IModalProps {
+  children:React.ReactNode;
+}
+
+const Modal = ({children}: IModalProps) => {
   return createPortal(  
     <React.Fragment>
       <div className='modal-container'>
@@ -20,7 +24,7 @@ const Modal = ({children}) => {
         </div>
       </div>
     </React.Fragment>, 
-    document.getElementById("modal"));
+    document.getElementById("modal")!);
 }
 
 export default Modal;

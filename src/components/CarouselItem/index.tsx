@@ -1,7 +1,13 @@
-import React from "react";
 import ReactStar from "react-stars";
 import "./CarouselItem.css";
-const CarouselItem = ({ img, title, description, profilePicture }) => {
+
+interface CarouselItemProps {
+  img: string;
+  title: string;
+  profilePicture: string;
+}
+
+const CarouselItem = ({ img, title, profilePicture }:CarouselItemProps): React.JSX.Element => {
   return (
     <>
       <img src={img} alt={title} className="video" />

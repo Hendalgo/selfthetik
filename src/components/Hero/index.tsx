@@ -3,7 +3,7 @@ import './Hero.css';
 import bgImage from '@assets/img/bg-texture.webp';
 import roundLogo from '@assets/logo/rounded-logo.png';
 
-const Hero = () => {
+const Hero = ():React.JSX.Element => {
   return (
     <React.Fragment>
       <section className="hero-container" style={{backgroundImage: `url(${bgImage})`}}>

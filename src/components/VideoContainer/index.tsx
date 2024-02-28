@@ -2,7 +2,13 @@ import React from 'react';
 import videoIcon from '@assets/svg/video-icon.svg';
 import './VideoContainer.css';
 
-const VideoContainer = ({title, img, description}) => {
+interface IVideoContainerProps {
+  title:string;
+  img:string;
+  description:string;
+}
+
+const VideoContainer = ({title, img, description}: IVideoContainerProps):React.JSX.Element => {
   return (
     <React.Fragment>
       <div className="v-container">

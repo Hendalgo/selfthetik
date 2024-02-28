@@ -1,7 +1,12 @@
 import React from 'react';
 import './Benefits.css'
 
-const Benefits = ({title, description}) => {
+interface BenefitsProps {
+  title: string;
+  description: string;
+}
+
+const Benefits = ({title, description}: BenefitsProps): React.JSX.Element => {
   return (
     <React.Fragment>
       <div className="benefit">

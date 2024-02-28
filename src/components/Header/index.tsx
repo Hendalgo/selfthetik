@@ -1,33 +1,34 @@
-import React from 'react';
+import React, { Ref, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import logoSelfhetik from '@assets/logo/logo-selfthetik.svg';
 import menu from '@assets/svg/menuHamburger.json';
 import './Header.css';
 import patreonLogo from '@assets/svg/patreon.svg';
-import { Player } from '@lottiefiles/react-lottie-player';
-const Header = () => {
-  const [width, setWidth] = React.useState(window.innerWidth);
-  const [patreonVisible, setPatreonVisible] = React.useState(false);
-  const [toggle, setToggle] = React.useState(false);
-  const [frame, setFrame] = React.useState(0);
-  const lottie = React.useRef()
+import { Player, PlayerEvent } from '@lottiefiles/react-lottie-player';
+
+const Header = ():React.ReactPortal => {
+  const [width] = useState<number>(window.innerWidth);
+  const [patreonVisible, setPatreonVisible] = useState<boolean>(false);
+  const [toggle, setToggle] = useState<boolean>(false);
+  const [frame, setFrame] = useState<number>(0);
+  const lottie:Ref<Player> = useRef<Player>(null);
   const menuChange = ()=>{
-    lottie.current.setPlayerSpeed(6);
-    lottie.current.play();
+    lottie?.current?.setPlayerSpeed(6);
+    lottie?.current?.play();
     setToggle(!toggle);
   }
-  const animation = (e)=>{
+  const animation = (e:PlayerEvent)=>{
     if (e === "frame") {
       setFrame(frame+1);
       if (frame === 15) {
-        lottie.current.pause();
+        lottie?.current?.pause();
       }
       if (frame === 29) {
         setFrame(0);
       }
     }
   }
-  React.useEffect(()=>{
+  useEffect(()=>{
     if (width > 768) {
       setPatreonVisible(true);
     }
@@ -56,8 +57,6 @@ const Header = () => {
         <button className="button-menu" onClick={menuChange}>
           <Player 
             src={menu}
-            width={200}
-            height={200}
             ref={lottie}
             onEvent={animation}
             style={{width: 50, height:50}}
@@ -92,7 +91,7 @@ const Header = () => {
       </div>
       </div>
     </React.Fragment>,
-    document.getElementById('header')
+    document.getElementById('header')!
   );
 }
 

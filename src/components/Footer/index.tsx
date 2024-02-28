@@ -2,7 +2,7 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 import "./Footer.css";
 
-const Footer = () => {
+const Footer = ():React.ReactPortal => {
   return createPortal(
     <React.Fragment>
       <div className="footer">
@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
       </div>
     </React.Fragment>
-  , document.getElementById("footer"));
+  , document.getElementById("footer")!);
 }
 
 export default Footer
