@@ -1,8 +1,6 @@
 import React from 'react';
 import './Hero.css';
-import bgImage from '@assets/img/bg-texture.jpg';
-import miniature from '@assets/img/hero.jpg';
-import playButton from '@assets/svg/play-button.svg';
+import bgImage from '@assets/img/bg-texture.webp';
 import roundLogo from '@assets/logo/rounded-logo.png';
 
 const Hero = () => {
