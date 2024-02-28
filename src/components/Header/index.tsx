@@ -8,7 +8,7 @@ import { Player, PlayerEvent } from '@lottiefiles/react-lottie-player';
 import { useTranslation } from 'react-i18next';
 
 const Header = ():React.ReactPortal => {
-  const {t} = useTranslation();
+  const {t} = useTranslation("ns1");
 
   const [width] = useState<number>(window.innerWidth);
   const [patreonVisible, setPatreonVisible] = useState<boolean>(false);

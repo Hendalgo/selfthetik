@@ -9,7 +9,7 @@ import results01 from '@assets/img/results01.webp';
 import results02 from '@assets/img/results02.webp';
 import results03 from '@assets/img/results03.webp';
 import results04 from '@assets/img/results04.webp';
-import { useTranslation } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
 const Header = lazy(() => import('@components/Header'));
 const Hero = lazy(() => import('@components/Hero'));
@@ -166,7 +166,7 @@ const Home = ():React.JSX.Element => {
             <div className="subscribe-bg" style={{backgroundImage: `url(${bgSubscribe})`}}>
               <div className="subs-title">
                 <h2 className='h1-b bold' style={{letterSpacing: 1}}>
-                  {t('subscribeOff')}
+                  <Trans ns='ns1' i18nKey="subscribeOff" components={{br: <br/>}} />
                 </h2>
               </div>
               <div className="subs-button">
