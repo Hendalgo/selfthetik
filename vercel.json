@@ -6,7 +6,7 @@
       "dest": "/$1.html"
     },
     {
-      "src": "/(.*).(js|css|json|png|jpg|jpeg|gif|ico|svg)",
+      "src": "/(.*).(js|css|json|png|jpg|jpeg|gif|ico|svg|webp)",
       "dest": "/$1.$2"
     },
     {
